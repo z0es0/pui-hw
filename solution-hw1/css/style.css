@@ -1,3 +1,107 @@
-/* h1 {
-    font-size: 100%;
-} */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 200%;
+    text-align: center;
+    font-weight: normal;
+    /* margin: 0; */
+}
+
+h2 {
+    font-size: 140%;
+    font-weight: normal;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* header and menu */
+
+.logo{
+    width: 400px;
+}
+
+.divider{
+    height: 3px;
+    color: black;
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4% 0 10% 0;
+    gap: 1.5em;
+}
+
+.menu-option{ 
+    text-transform: uppercase;
+    margin: 5px 0px;
+}
+
+#current-page{
+    font-weight: bold;
+    background-color: yellow;
+}
+
+/* product list */
+
+.product-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0;
+    width: 430px
+}
+
+.product-card:hover{
+    background-color: yellow;
+}
+
+.product-card:hover .product-name{
+    font-weight: bold;
+}
+
+.product-thumbnail{
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    border: black 5px solid;
+}
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    gap: 0px;
+}
+
+.product-name{
+    text-decoration: underline;
+}
+
+/* product detail page*/
+
+.product-detail{
+    xxx
+}
+
+.product-image{
+    width: 600px
+    height: 600px
+    margin: 10px;
+    border: black 5px solid;
+}
