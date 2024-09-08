@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- https://www.w3schools.com/tags/tag_select.asp 
+https://www.w3schools.com/tags/tag_button.asp 
+https://www.shecodes.io/athena/24898-how-to-customize-a-button-border-using-css
+-->
 
 <html lang="en">
   <head>
@@ -29,10 +33,38 @@
 
     <h1>Original cinnamon roll</h1>
 
-    <section class="product-detail">
+    <article class="product-detail">
         <img class="product-image" src="/assets/products/original-cinnamon-roll.jpg" alt="original cinammon roll">
+        
+        <section class="product-description">
+            <h2>Customize our delicious, hand-made cinnamon roll to your liking!</h2>
+            
+            <section>
+                <h2>Glazing:</h2>
+                <select name="glazes" id="glazes">
+                    <option value="keep original">Keep original</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="cream cheese">Cream cheese</option>
+                </select>
+            </section>
 
-    </section>
+            <section>
+                <h2>Pack size:</h2>
+                <select name="pack size" id="pack size">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </section>
+
+            <section class="price-cart">
+                <h2 class="price">$2.49<h2>
+                <button type="button" class="button">Add to Cart</button>
+            </section>
+
+
+        </section>
+    </article>
 
 
 
