@@ -32,6 +32,7 @@ a {
     height: 3px;
     color: black;
     background-color: black;
+    width: 100%;
 }
 
 .menu{
@@ -135,7 +136,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 1200px */
+    /* justify-content: center; */
 }
 
 .cart-item{
@@ -160,4 +161,11 @@ a {
 .remove-button{
     font-size: 80%;
     text-decoration: underline;
+}
+
+.cart-divider{
+    height: 3px;
+    color: black;
+    background-color: black;
+    width: 60%;
 }
