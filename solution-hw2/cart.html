@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!-- references:
+https://www.w3schools.com/html/html_filepaths.asp 
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="./css/style.css">
+    <title>Shopping Cart</title>
+  </head>
+
+  <body>
+    <nav>
+        <a href="./index.html">
+            <img class="logo" src="./assets/logo/logo-01.svg" alt="logo">
+        </a>
+        <hr class="divider">
+
+        <div class="menu">
+            <h2>
+            <a class="menu-option" href="./index.html">Products</a>
+            </h2>
+            <h2>
+            <a id="current-page" class="menu-option" href="./cart.html">Cart</a>
+            </h2>
+        </div>
+    </nav>
+
+    <section class="cart-list">
+
+        <h1>Shopping Cart</h1>
+
+        <article class="cart-item">
+            <img class="cart-thumbnail" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
+            <p class="remove-button">Remove</p>
+            <section class="cart-item-details">
+                <h2>Original Cinnamon Roll</h2>
+                <h2>Glazing: Keep original</h2>
+                <h2>Pack Size: 1</h2>
+            </section>
+            <h3>$2.49</h3>
+        </article>
+
+        <article class="cart-item">
+            <img class="cart-thumbnail" src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double chocolate cinnamon roll">
+            <p class="remove-button">Remove</p>
+            <section class="cart-item-details">
+                <h2>Double Chocolate Cinnamon Roll</h2>
+                <h2>Glazing: Sugar milk</h2>
+                <h2>Pack Size: 6</h2>
+            </section>
+            <h3>$27.45</h3>
+        </article>
+
+        <hr class="cart-divider">
+
+        <h3>Total: $29.94</h3>
+
+        <button type="button" class="button">Checkout</button>
+
+    </section>
+  </body>
+</html>

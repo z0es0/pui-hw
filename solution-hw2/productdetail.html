@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- references:
+https://www.w3schools.com/tags/tag_select.asp 
+https://www.w3schools.com/tags/tag_button.asp 
+https://www.shecodes.io/athena/24898-how-to-customize-a-button-border-using-css
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="./css/style.css">
+    <title>Product Detail</title>
+  </head>
+
+<!-- header and menu -->
+
+<body>
+    <nav>
+      <a href="./index.html">
+        <img class="logo" src="./assets/logo/logo-01.svg" alt="logo">
+      </a>
+      <hr class="divider">
+
+      <div class="menu">
+        <h2>
+          <a id="current-page" class="menu-option" href="./index.html">Products</a>
+        </h2>
+        <h2>
+          <a class="menu-option" href="./cart.html">Cart</a>
+        </h2>
+      </div>
+    </nav>
+
+    <!-- product detail -->
+
+    <article class="product-detail">
+
+        <h1>Original cinnamon roll</h1>
+        
+        <img class="product-image" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinammon roll">
+        
+        <section class="product-description">
+            <h2>Customize our delicious, hand-made cinnamon roll to your liking!</h2>
+            
+            <section>
+                <h2>Glazing:</h2>
+                <select name="glazes" id="glazes">
+                    <option value="keep original">Keep original</option>
+                    <option value="sugar milk">Sugar milk</option>
+                    <option value="vanilla milk">Vanilla milk</option>
+                    <option value="double chocolate">Double chocolate</option>
+                </select>
+            </section>
+
+            <section>
+                <h2>Pack size:</h2>
+                <select name="pack size" id="pack-size">
+                    <option value="1">1</option>
+                    <option value="3">6</option>
+                    <option value="12">12</option>
+                </select>
+            </section>
+
+            <section class="price-cart">
+                <h2 class="price">$2.49</h2>
+                <button type="button" class="button">Add to Cart</button>
+            </section>
+        </section>
+    </article>
+
+
+
+  </body>
+</html>
