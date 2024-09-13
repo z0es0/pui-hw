@@ -1,17 +1,17 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
 
 h1 {
-    font-size: 200%;
+    font-size: 170%;
     text-align: center;
     font-weight: normal;
     /* margin: 0; */
 }
 
 h2 {
-    font-size: 140%;
+    font-size: 120%;
     font-weight: normal;
     margin: 0;
 }
@@ -29,24 +29,50 @@ a {
 
 /* header and menu */
 
+nav {
+    display: flex;
+    justify-content: right;
+    gap: 4.2em;
+    margin: 2em 3em 0em 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
 .logo{
     width: 400px;
 }
 
+.right-side-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.6em;
+    /* flex-grow: 4; */
+}
+
 .divider{
-    height: 3px;
+    height: 5px;
     color: black;
     background-color: black;
     width: 100%;
 }
 
-.menu{
+.page-title{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 4% 0 10% 0;
-    gap: 1.5em;
+    justify-content: left;
 }
+
+/* .menu{
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* margin: 4% 0 10% 0; */
+    /* gap: 3.5em;
+} */ 
 
 .menu-option{ 
     text-transform: uppercase;
@@ -62,15 +88,18 @@ a {
 
 .product-list{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* gap: 3em; */
+    justify-content: space-evenly;
+    margin: 2em;
 }
 
 .product-card{
     display: flex;
     flex-direction: column;
-    margin: 5% 0;
-    width: 426px
+    /* margin: 5% 0; */
+    width: auto;
 }
 
 .product-card:hover{
@@ -82,21 +111,23 @@ a {
 }
 
 .product-thumbnail{
-    width: 400px;
-    height: 400px;
-    margin: 10px;
+    width: 285px;
+    height: 285px;
+    margin: 5px;
     border: black 3px solid;
 }
 
 .product-subtitle{
     display: flex;
     flex-direction: column;
-    margin: 10px 10px;
-    gap: 0px;
+    margin: 10px 0 10px 10px;
+    gap: .1em;
+    width: 275px;
 }
 
 .product-name{
     text-decoration: underline;
+    text-wrap: wrap;
 }
 
 /* product detail page*/

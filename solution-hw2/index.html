@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 
 <!-- references:
- https://www.w3schools.com/html/html5_semantic_elements.asp 
- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
- https://www.w3schools.com/tags/tag_hr.asp
- https://blog.hubspot.com/website/blog/tabid/6307/bid/19727/easy-html-tricks-for-the-non-technical-marketer.aspx#:~:text=To%20make%20a%20horizontal%20line%20in%20HTML%2C%20use%20the%20%3Chr,not%20have%20a%20closing%20tag.
- https://developer.mozilla.org/en-US/docs/Web/CSS/gap
- https://www.tutorialspoint.com/how-to-affect-other-elements-when-one-element-is-hovered-in-html#:~:text=How%20to%20affect%20other%20elements%20when%20one%20element%20is%20hovered%20in%20HTML%3F,-HTMLWeb%20Development&text=To%20affect%20other%20elements%20when%20one%20element%20is%20hovered%2C%20an,hover%20affect%20is%20then%20visible.
- https://www.w3schools.com/cssref/css_selectors.php-->
+ -->
 
 
  <html lang="en">
@@ -21,27 +15,34 @@
 <!-- header and menu -->
 
   <body>
-    <nav>
+    <header>
       <a href="./index.html">
         <img class="logo" src="./assets/logo/logo-01.svg" alt="logo">
       </a>
-      <hr class="divider">
 
-      <div class="menu">
-        <h2>
-          <a id="current-page" class="menu-option" href="./index.html">Products</a>
-        </h2>
-        <h2>
-          <a class="menu-option" href="./cart.html">Cart</a>
-        </h2>
+      <div class="right-side-nav">
+        <nav>
+            <h2>
+            <a id="current-page" class="menu-option" href="./index.html">Products</a>
+            </h2>
+            <h2>
+            <a class="menu-option" href="./cart.html">Cart</a>
+            </h2>
+        </nav>
+
+        <hr class="divider">
+
+        <h1 class="page-title">Our hand-made cinnamon rolls</h1>
+
       </div>
-    </nav>
+
+    </header>
 
     <!-- product list -->
 
     <section class="product-list">
       
-      <h1>Our hand-made cinnamon rolls</h1>
+      
 
       <a class="product-card" href="./productdetail.html">
         <img class="product-thumbnail" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinammon roll">
@@ -78,7 +79,7 @@
       <a class="product-card" href="./productdetail.html">
         <img class="product-thumbnail" src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double-chocolate cinammon roll">
         <section class="product-subtitle"> 
-          <h2 class="product-name">Double-chocoladasdsadsadte cinnamon roll</h2>
+          <h2 class="product-name">Double-chocolate cinnamon roll</h2>
           <h2>$3.99</h2>
         </section>
       </a>
