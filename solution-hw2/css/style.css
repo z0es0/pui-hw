@@ -134,8 +134,10 @@ header {
 
 .product-detail{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    margin: 5em;
+    gap: 3em;
 }
 
 .product-image{
@@ -148,8 +150,23 @@ header {
 .product-description{
     display: flex;
     flex-direction: column;
-    width: 360px;
-    gap: 2rem;
+    width: auto;
+    gap: 3em;
+    /* margin: 0 0 0 2em; */
+}
+
+.customization{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 0 3em 0;
+}
+
+.customization-option{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: auto;
 }
 
 .price-cart{ 
@@ -162,7 +179,7 @@ header {
 .button{
     border: 3px solid black;
     font-size: 100%;
-    padding: 10px 50px;
+    padding: 10px 40px;
     background-color: yellow;
 }
 
