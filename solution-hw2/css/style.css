@@ -7,7 +7,6 @@ h1 {
     font-size: 170%;
     text-align: center;
     font-weight: normal;
-    /* margin: 0; */
 }
 
 h2 {
@@ -26,6 +25,9 @@ a {
     text-decoration: none;
 }
 
+.bold{
+    font-weight: bold;
+}
 
 /* header and menu */
 
@@ -66,14 +68,6 @@ header {
     justify-content: left;
 }
 
-/* .menu{
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* margin: 4% 0 10% 0; */
-    /* gap: 3.5em;
-} */ 
-
 .menu-option{ 
     text-transform: uppercase;
     margin: 5px 0px;
@@ -89,8 +83,6 @@ header {
 .product-list{
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
-    /* gap: 3em; */
     justify-content: space-evenly;
     margin: 2em;
 }
@@ -98,7 +90,6 @@ header {
 .product-card{
     display: flex;
     flex-direction: column;
-    /* margin: 5% 0; */
     width: auto;
 }
 
@@ -136,7 +127,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 5em;
+    margin: 2.5em 5em 5em 5em;
     gap: 3em;
 }
 
@@ -152,7 +143,6 @@ header {
     flex-direction: column;
     width: auto;
     gap: 3em;
-    /* margin: 0 0 0 2em; */
 }
 
 .customization{
@@ -171,15 +161,15 @@ header {
 
 .price-cart{ 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-weight: bold;
     align-items: center;
 }
 
-.button{
-    border: 3px solid black;
-    font-size: 100%;
-    padding: 10px 40px;
+.cart-button{
+    border: 2px solid black;
+    font-size: 120%;
+    padding: 10px 25px;
     background-color: yellow;
 }
 
@@ -188,15 +178,17 @@ header {
 .cart-list{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
+    width: 700px;
+    /* margin-left: auto;
+    margin-right: 6em; */
+    margin: 5em 6em 0 auto;
 }
 
 .cart-item{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin: 6% 0;
 }
 
 .cart-thumbnail{
@@ -208,17 +200,40 @@ header {
 .cart-item-details{
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    margin: 0 0 2em 2em;
+}
+
+.cart-thumbnail-details{
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
 .remove-button{
-    font-size: 80%;
+    font-size: 120%;
     text-decoration: underline;
+    font-weight: bold;
+    margin: 1em 0 0.8em 0;
 }
 
-.cart-divider{
-    height: 3px;
-    color: black;
-    background-color: black;
-    width: 60%;
+.total-price{
+    display: flex;
+    flex-direction: row;
+    /* width: 70%; */
+    justify-content: right;
+    gap: 17em;
+    margin: 1em 0;
+}
+
+.button-line{
+    display: flex;
+    justify-content: right;
+}
+
+.button{
+    border: 2px solid black;
+    font-size: 120%;
+    padding: 20px 40px;
+    background-color: yellow;
 }
