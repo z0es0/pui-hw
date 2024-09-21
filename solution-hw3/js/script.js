@@ -80,13 +80,5 @@ function displayPrice() {
 displayPrice();
 
 // call displayPrice on change
-
-function glazingChange(element) {
-    // const priceChange = element.value;
-    displayPrice();
-}
-
-function packSizeChange(element) {
-    // const priceChange = element.value;
-    displayPrice();
-}
+selectGlazingElement.addEventListener('change', displayPrice)
+selectPackSizeElement.addEventListener('change', displayPrice)
