@@ -10,6 +10,9 @@ https://www.shecodes.io/athena/24898-how-to-customize-a-button-border-using-css
     <meta charset="UTF-8">
     <link rel="stylesheet"
           href="./css/style.css">
+    
+    <script src="./js/script.js" defer></script>
+
     <title>Product Detail</title>
   </head>
 
@@ -52,26 +55,26 @@ https://www.shecodes.io/athena/24898-how-to-customize-a-button-border-using-css
 
                 <div class="customization-option">
                     <h2>Glazing:</h2>
-                    <select name="glazes" id="glazes">
-                        <option value="keep original">Keep original</option>
-                        <option value="sugar milk">Sugar milk</option>
-                        <option value="vanilla milk">Vanilla milk</option>
-                        <option value="double chocolate">Double chocolate</option>
+                    <select id="glazingOptions"
+                      onchange="glazingChange(this)"
+                      class="dropdown">
                     </select>
+
                 </div>
             
                 <div class="customization-option">
                     <h2>Pack size:</h2>
-                    <select name="pack size" id="pack-size">
-                        <option value="1">1</option>
-                        <option value="3">6</option>
-                        <option value="12">12</option>
+                    <select id="packSizeOptions"
+                      onchange="packSizeChange(this)"
+                      class="dropdown">
                     </select>
+
                 </div>
             </div>
 
             <section class="price-cart">
-                <h2 class="bold">$2.49</h2>
+                <h2 id="total-price">none</h2> 
+
                 <button type="button" class="cart-button">Add to Cart</button>
             </section>
         </section>
