@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- references:
+https://www.w3schools.com/tags/tag_select.asp 
+https://www.w3schools.com/tags/tag_button.asp 
+https://www.shecodes.io/athena/24898-how-to-customize-a-button-border-using-css
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="./css/style.css">
+    
+    <script src="./js/script.js" defer></script>
+    <script src="./js/rollsData.js" defer></script>
+    
+    <title>Product Detail</title>
+  </head>
+
+<!-- header and menu -->
+
+<body>
+    <header>
+        <a href="./index.html">
+          <img class="logo" src="./assets/logo/logo-01.svg" alt="logo">
+        </a>
+  
+        <div class="right-side-nav">
+          <nav>
+              <h2>
+              <a id="current-page" class="menu-option" href="./index.html">Products</a>
+              </h2>
+              <h2>
+              <a class="menu-option" href="./cart.html">Cart</a>
+              </h2>
+          </nav>
+  
+          <hr class="divider">
+  
+          <h1 class="page-title">Original cinnamon roll</h1>
+  
+        </div>
+  
+      </header>
+
+    <!-- product detail -->
+
+    <article class="product-detail">
+        
+        <img class="product-image" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinammon roll">
+        
+        <section class="product-description">
+            <h2>Customize our delicious, hand-made cinnamon roll to your liking!</h2>
+            
+            <div class="customization">
+
+                <div class="customization-option">
+                    <h2>Glazing:</h2>
+                    <select name="glazing-options"
+                    id="glazingOptions"
+                      class="dropdown">
+                    </select>
+
+                </div>
+            
+                <div class="customization-option">
+                    <h2>Pack size:</h2>
+                    <select name="pack-size-options"
+                      id="packSizeOptions"
+                      class="dropdown">
+                    </select>
+
+                </div>
+            </div>
+
+            <section class="price-cart">
+                <h2 id="total-price">none</h2> 
+
+                <button type="button" class="cart-button">Add to Cart</button>
+            </section>
+        </section>
+    </article>
+
+
+
+  </body>
+</html>
