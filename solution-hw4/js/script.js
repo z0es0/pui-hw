@@ -66,10 +66,31 @@ for (let i = 0; i < packSizeOptions.length; i++)
         selectPackSizeElement.add(packSizeOption);
     }
 
-// function to calculate and display total price
+// ----------- HW 4: UPDATING IMAGE, PRICE, TITLE BASED ON PARAM -----------
+// REFERENCES:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors
+
+// create empty cart array
+let cart = [];
+
+// get rollType from URL parameters
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');
+
+// update header based on param
+let currHeader = document.querySelector('.page-title')
+currHeader.innerText = rollType + ' Cinnamon Roll'
+
+// update image based on param
+let imageSrc = rolls[rollType].imageFile
+let currImage = document.querySelector('.product-image')
+currImage.src = './assets/products/' + imageSrc
+
+// function to calculate and display total price (moved from above)
 
 function displayPrice() {
-    let basePrice = 2.49;
+    let basePrice = rolls[rollType].basePrice; // udpated to be based on param
     let glazePriceAddition = parseFloat(selectGlazingElement.value);
     let packSizePriceMultiplier = parseFloat(selectPackSizeElement.value);
 
@@ -86,23 +107,29 @@ displayPrice();
 selectGlazingElement.addEventListener('change', displayPrice)
 selectPackSizeElement.addEventListener('change', displayPrice)
 
+// ---------------------- HW 4: ADD TO CART ------------------------
 
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
 
-// ------------------------------ HW 4 --------------------------------
+        let addBtn = document.querySelector('.cart-button')
+        addBtn.onclick = this.addToCart(this)
+    }
 
-let cart = [];
+    // addToCart() {
+    //     const newItem = 
+    // }
 
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const rollType = params.get('roll');
+}
 
-let currHeader = document.querySelector('.page-title')
-currHeader.innerText = rollType + ' Cinnamon Roll'
+// const newItem = new Roll(
+//     rollType,
+    
+// )
 
-console.log(rolls)
-// let imageSrc = rolls[rollType][1]
-// console.log(imageSrc)
-
-let currImage = document.querySelector('.product-image')
-console.log(currImage)
-// currImage.src = 
+console.log(selectGlazingElement.text)
+console.log(selectPackSizeElement.text)
