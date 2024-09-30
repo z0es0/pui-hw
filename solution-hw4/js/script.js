@@ -1,69 +1,44 @@
 // REFERENCES
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
 // https://www.w3schools.com/jsref/jsref_tofixed.asp
-
+// https://www.w3schools.com/JS/js_loop_forin.asp
 
 // ------------------------------ HW 3 --------------------------------
 
-// set up price adaptations objects
-let glazingOptions = [
-    {
-      glaze: 'Keep original',
-      priceAddition: 0,
-    },
-    {
-        glaze: 'Sugar milk',
-        priceAddition: 0,
-    },
-    {
-        glaze: 'Vanilla milk',
-        priceAddition: .5,
-    },
-    {
-        glaze: 'Double chocolate',
-        priceAddition: 1.5,
-    },
-  ];
+// create glazing and pack size option object
+let glazingOptions = {
+    'Keep original': 0,
+    'Sugar milk': 0,
+    'Vanilla milk': .5,
+    'Double chocolate': 1.5
+};
   
-  let packSizeOptions = [
-    {
-      packSize: 1,
-      priceMultiplier: 1,
-    },
-    {
-        packSize: 3,
-        priceMultiplier: 3,
-    },
-    {
-        packSize: 6,
-        priceMultiplier: 5,
-    },
-    {
-        packSize: 12,
-        priceMultiplier: 10,
-    },
-  ];
+let packSizeOptions = {
+    '1': 1,
+    '3': 3,
+    '6': 5,
+    '12': 10
+};
 
 // select elements
 let selectGlazingElement = document.querySelector('#glazingOptions');
 let selectPackSizeElement = document.querySelector('#packSizeOptions');
 
 // populate dropdowns
+for (key in glazingOptions)
+    {
+        let glazingOption = document.createElement("option");
+        glazingOption.value = glazingOptions[key];
+        glazingOption.text = key;
+        selectGlazingElement.add(glazingOption)
+    }
 
-for (let i = 0; i < glazingOptions.length; i++)
-{
-    let glazeOption = document.createElement("option");
-    glazeOption.text = glazingOptions[i].glaze;
-    glazeOption.value = glazingOptions[i].priceAddition;
-    selectGlazingElement.add(glazeOption);
-}
-
-for (let i = 0; i < packSizeOptions.length; i++)
+for (key in packSizeOptions)
     {
         let packSizeOption = document.createElement("option");
-        packSizeOption.text = packSizeOptions[i].packSize;
-        packSizeOption.value = packSizeOptions[i].priceMultiplier;
-        selectPackSizeElement.add(packSizeOption);
+        packSizeOption.value = packSizeOptions[key];
+        packSizeOption.text = key;
+        selectPackSizeElement.add(packSizeOption)
     }
 
 // ----------- HW 4: UPDATING IMAGE, PRICE, TITLE BASED ON PARAM -----------
@@ -88,9 +63,9 @@ let currImage = document.querySelector('.product-image')
 currImage.src = './assets/products/' + imageSrc
 
 // function to calculate and display total price (moved from above)
+let basePrice = rolls[rollType].basePrice; // updated to be based on param
 
 function displayPrice() {
-    let basePrice = rolls[rollType].basePrice; // udpated to be based on param
     let glazePriceAddition = parseFloat(selectGlazingElement.value);
     let packSizePriceMultiplier = parseFloat(selectPackSizeElement.value);
 
@@ -108,6 +83,9 @@ selectGlazingElement.addEventListener('change', displayPrice)
 selectPackSizeElement.addEventListener('change', displayPrice)
 
 // ---------------------- HW 4: ADD TO CART ------------------------
+// REFERENCES: https://stackoverflow.com/questions/5913/getting-the-text-from-a-drop-down-box
+// https://www.shecodes.io/athena/122089-how-to-add-an-object-to-an-array-in-javascript#google_vignette
+// https://www.w3schools.com/jsref/event_onclick.asp
 
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -115,21 +93,21 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
-
-        let addBtn = document.querySelector('.cart-button')
-        addBtn.onclick = this.addToCart(this)
     }
-
-    // addToCart() {
-    //     const newItem = 
-    // }
-
 }
 
-// const newItem = new Roll(
-//     rollType,
+function addToCart() {
+    let selectedRollGlazing = selectGlazingElement.options[selectGlazingElement.selectedIndex].text;
+    let selectedPackSize = selectPackSizeElement.options[selectPackSizeElement.selectedIndex].text;
     
-// )
+    const newItem = new Roll(
+        rollType,
+        selectedRollGlazing,
+        selectedPackSize,
+        basePrice
+    )
 
-console.log(selectGlazingElement.text)
-console.log(selectPackSizeElement.text)
+    cart.push(newItem);
+
+    console.log(cart)
+}
