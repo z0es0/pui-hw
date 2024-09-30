@@ -111,3 +111,5 @@ function addToCart() {
 
     console.log(cart)
 }
+
+document.querySelector(".cart-button").addEventListener('click', addToCart);
