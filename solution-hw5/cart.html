@@ -39,54 +39,61 @@ https://www.w3schools.com/html/html_filepaths.asp
   
       </header>
 
-    <section class="cart-list">
+    <section class="cart-page">
+      <div id="cart-list">
 
-        <div class="cart-item">
-            <div class="cart-thumbnail-details">
+        <template id="cart-item-template">
+          <div class="cart-item">
+            <div class="cart-item-content">
+                <div class="cart-thumbnail-details">
+                    
+                    <img class="roll-thumbnail" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
                 
-                <img class="cart-thumbnail" src="./assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
-            
-                <div class="cart-item-details">
-                    <h2>Original Cinnamon Roll</h2>
-                    <h2>Glazing: Keep original</h2>
-                    <h2>Pack Size: 1</h2>
+                    <div class="roll-details">
+                        <h2 class="roll-title">Original Cinnamon Roll</h2>
+                        <h2>Glazing: Keep original</h2>
+                        <h2>Pack Size: 1</h2>
+                    </div>
+
                 </div>
 
+                <h2 class="price">$ 2.49</h2>
             </div>
 
-            <h2 class="price">$ 2.49</h2>
-        </div>
-
-        <p class="remove-button">Remove</p>
-
-        <div class="cart-item">
-            <div class="cart-thumbnail-details">
+            <p class="remove-button">Remove</p>
+          </div>
+        </template>
+          <!-- <div class="cart-item">
+            <div class="cart-item-content">
+                <div class="cart-thumbnail-details">
+                    
+                    <img class="roll-thumbnail" src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double chocolate cinnamon roll">
                 
-                <img class="cart-thumbnail" src="./assets/products/double-chocolate-cinnamon-roll.jpg" alt="double chocolate cinnamon roll">
-            
-                <div class="cart-item-details">
-                    <h2>Double Chocolate Cinnamon Roll</h2>
-                    <h2>Glazing: Sugar milk</h2>
-                    <h2>Pack Size: 6</h2>
+                    <div class="roll-details">
+                        <h2>Double Chocolate Cinnamon Roll</h2>
+                        <h2>Glazing: Sugar milk</h2>
+                        <h2>Pack Size: 6</h2>
+                    </div>
+
                 </div>
 
-            </div>
+                <h2 class="price">$ 27.45</h2>
+            </div>  
+            <p class="remove-button">Remove</p>
+          </div> -->
 
-            <h2 class="price">$ 27.45</h2>
-        </div>
+      </div>
 
-        <p class="remove-button">Remove</p>
+      <hr class="divider">
 
-        <hr class="divider">
-
-        <div class="total-price">
-            <h2>Total</h2>
-            <h2>$ 29.94</h2>
-        </div>
-        
-        <div class="button-line">
-            <button type="button" class="button">Checkout</button>
-        </div>
+      <div class="total-price">
+          <h2>Total</h2>
+          <h2>$ 29.94</h2>
+      </div>
+      
+      <div class="button-line">
+          <button type="button" class="button">Checkout</button>
+      </div>
 
     </section>
   </body>
