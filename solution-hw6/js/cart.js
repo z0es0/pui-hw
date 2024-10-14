@@ -81,7 +81,7 @@ function updateElement(roll) {
 
     rollTitleElement.innerText = roll.type + ' Cinnamon Roll';
     rollPackSizeElement.innerText = 'Pack size: ' + roll.size;
-    rollPriceElement.innerText = '$ ' + roll.totalPrice;
+    rollPriceElement.innerText = '$ ' + calculatePrice(roll.type, roll.glazing, roll.size, roll.basePrice);
 }
 
 // delete roll
@@ -89,6 +89,7 @@ function deleteRoll(roll) {
     roll.element.remove();
 
     const index = cart.indexOf(roll);
+    console.log(index)
     cart.splice(index, 1);
     
     saveToLocalStorage();
@@ -98,9 +99,13 @@ function deleteRoll(roll) {
 // calculate total price
 function calculateCartTotal() {
     let totalPrice = 0;
-    console.log(cart)
-    for (const roll of cart) {
-        totalPrice += parseFloat(calculatePrice(roll.type, roll.glazing, roll.size, roll.basePrice));
+
+    if (cart.length == 0) {
+        totalPrice = 0.00000;
+    } else {
+        for (const roll of cart) {
+            totalPrice += parseFloat(calculatePrice(roll.type, roll.glazing, roll.size, roll.basePrice));
+        }
     }
     const cartTotalElement = document.querySelector('.total-price');
     cartTotalElement.innerText = '$ ' + totalPrice.toFixed(2);
@@ -123,15 +128,11 @@ function saveToLocalStorage() {
     localStorage.setItem('storedCart', cartArrayString);
 }
 
-function rebuildCartItem(cartItem) {
-    return new Roll(cartItem.type, cartItem.glazing, cartItem.size, cartItem.basePrice);
-}
-
 function populatePage() {
     for (const cartItem of cart) {
-        rebuiltCartItem = rebuildCartItem(cartItem);
-        createElement(rebuiltCartItem);
+        createElement(cartItem);
       };
+    calculateCartTotal();
 }
 
 populatePage();
