@@ -125,76 +125,135 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+My project is a personal portfolio website designed to showcase my professional and academic work in a visually engaging and accessible way. It includes a homepage, an "About Me" page, and individual project pages following a cohesive template. By featuring interactive elements like embedded videos, clickable prototypes, and micro-interactions activated on scroll and hover, my goal is to demonstrate my programming and design abilities. I am motivated to create a polished, creative platform that highlights my personality and skills, making a strong impression on recruiters. The website will also adhere to WCAG standards to ensure accessibility across desktop, laptop, and mobile devices.
 
 ## High-Fi Prototypes
 
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+#### Home Page
+![Prototype 1: Home Page](images/hifiprototype1.1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+##### Home Page *(on mouse hover over a project)*
+![Prototype 1: Home Page (on mouse hover over a project)](images/hifiprototype1.3.png)
+
+On this page, users struggled to identify clickable areas on the homepage, making navigation to project details unclear. The changing background color was seen as distracting, prompting suggestions for a more static design. The homepage layout was also perceived as somewhat chaotic, with users preferring a more structured arrangement.
 
 ### *Prototype 2*
+#### Project Detail Page
+![Prototype 1: Project Details Page](images/hifiprototype1.2.png)
 
-…
+The participants appreciated the concise information on the project detail page and the sidebar layout, as well as the prominent question in large text. However, they suggested enhancing content hierarchy to improve readability and guide users more effectively through the information.
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
+During my usability test, I gained valuable insights into how users interact with my portfolio website and pinpointed areas for improvement. I conducted the test using the Think Aloud method, where participants explored the Figma prototype, tasked with the objective of locating and learning more about the "Season" project on my portfolio. 
+
+The most immediate feedback was the difficulty participants had identifying where to click on the homepage to access project details. This indicated a lack of clarity in the website’s affordances and suggested that users were unsure of how to navigate to deeper project content. To address this, I added a “details” button while hovering over the project card to make the clickability more intuitive.
+
+Another piece of feedback was regarding the changing background color, which users felt was visually distracting and potentially unnecessary. This comment led me to reconsider the purpose of dynamic background colors, and I plan to experiment with more subtle variations or even static background options.
+
+The overall homepage layout was another point of discussion, with users describing it as disorganized or chaotic. While the intention was to create an interesting visual layout, I saw the need to create a better structure. To achieve this, I experimented with aligning project cards along both the x-axis and y-axis in a grid format, while still allowing for variety in card shapes. This adjustment maintained the playful aesthetic while providing a clearer visual alignment.
+
+Finally, users appreciated the amount of information on the project details page, noting that it was easy to digest and without excessive text. However, one participant noted that I could use better hierarchy to differentiate the subheading texts from the body content blocks. To fix this, I added more hierarchy through text size to make the subheadings stand out more. 
+
+Through these refinements, I think the final design balances aesthetic appeal with usability in a better way.
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+### *Prototype 1*
+
+#### Home Page
+![Prototype 1: Home Page](images/hifiprototype2.1.png)
+
+![Prototype 1: Home Page]
+
+For the homepage updates, I added clearer text hierarchy with capitalization and varied fonts, ensuring key information stands out. I also made navigation tabs consistent across the top and bottom for smoother usability, adjusted line width and leading to enhance readability, and refined the “gallery wall” layout to create a more intentional, visually engaging design.
+
+
+##### Home Page *(on mouse hover over a project)*
+![Prototype 2: Home Page (on mouse hover over a project)](images/hifiprototype2.3.png)
+
+No change.
+
+### *Prototype 2*
+#### Project Detail Page
+![Prototype 2: Project Details Page](images/hifiprototype2.2.png)
+
+For the details page, I introduced stronger text hierarchy by adding capitalized headers and a distinct font to enhance readability. I broke up lengthy text blocks, reduced line width for improved flow, and minimized leading in larger text. Additionally, I refined the sidebar layout to present project information more clearly.
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+The lab session provided valuable feedback that influenced various aspects of my portfolio design. One suggestion was to use background color only around specific highlighted sections, instead of changing the color of the whole page. Although I liked this idea, I opted not to implement it within my timeline, as I wanted the design to feel playful rather than like a traditional button highlight.
+
+Feedback also indicated a need for more text hierarchy, which I addressed by using capitalized text and a distinct font to create visual differentiation. Some participants suggested removing the block text bio on the homepage, but I chose to keep it because it conveys essential information I want readers to know immediately. Another suggestion was to ensure consistent placement for navigation tabs across the top and bottom, which I adjusted to provide a smoother user experience.
+
+I experimented with repositioning elements to make the layout appear more intentional rather than like a standard, unrefined structure. While this may still undergo further adjustments, I feel the layout is now closer to my desired aesthetic. One person's idea of nudging elements around on hover intrigued me as a way to add a playful, "messy" vibe, so I may explore this effect further.
+
+Participants also suggested breaking up text and adjusting line width to enhance readability, which I implemented, along with reducing leading in larger text blocks. These changes allowed me to improve visual structure while preserving key elements that reflect my personal style and the goals of the portfolio.
 
 ## Milestones
 
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
-
 ### *Implementation Plan*
+ Week 9 Oct 28 - Nov 1:
+  - [X]FP1 due
+  - [X] Conduct usability testing on prototype
+  - [X] Incorporate initial feedback on structure
 
-- [ ] Week 9 Oct 28 \- Nov 1:
-  - [X] FP1 due
-  - [ ] ...
-  
-- [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+ Week 10 Nov 4 - Nov 8:
+  - [X] FP2 due
+  - [X] Adjust navigation consistency
+  - [X] Implement text hierarchy updates on homepage and details pages
+  - [ ] Refine gallery wall layout
 
-- [ ] Week 11 Nov 11 \- Nov 15:  
-- [ ] Week 12 Nov 18 \- Nov 22:   
-- [ ] Week 13 Nov 25 \- Nov 29:  
+Week 11 Nov 11 - Nov 15:
+  - [ ] Conduct second round of usability testing on updated prototype 
+  - [ ] Incorporate feedback on readability and layout
+  - [ ] Begin final visual polish and animation integration
 
-  - [ ] Thanksgiving  
-- [ ] Week 14 Dec 2 \- Dec 6:  
-  - [ ] FP4 due 
+Week 12 Nov 18 - Nov 22:
+  - [ ] Adjust responsive design for mobile and tablet views
+  - [ ] Conduct accessibility testing (WCAG compliance)
+  - [ ] Refine interaction effects (hover, scroll animations)
+
+Week 13 Nov 25 - Nov 29:
+  - [ ] Thanksgiving
+  - [ ] Review all content and finalize text for each page
+
+Week 14 Dec 2 - Dec 6:
+  - [ ] FP4 due
+  - [ ] Finalize prototype for submission
 
 ### *Libraries and Other Components*
 
-List the JS libraries and other components (if applicable) that you plan to use. 
-* 
+* jQuery: For easier DOM manipulation, event handling, and animations.
+* AOS (Animate On Scroll): For adding scroll-triggered animations to make elements appear as users scroll down.
+* Bootstrap: For responsive layout components, grid system, and some built-in styling.
+* Figma's Embed API: To embed interactive Figma prototypes.
 
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
+I plan to use Generative AI tools primarily as support resources during the coding process, rather than as primary developers. I’ll rely on these tools to help me get unstuck, provide me with new concepts I may not know about that I can look into, and assist with debugging, allowing me to learn more independently while ensuring smooth progress.
 
 ### *Tool Use*
 
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
+ChatGPT
 
-* ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
-* GitHub Copilot  
-* ...
+* I will use ChatGPT to get ideas for structuring functions, optimizing code for performance, and troubleshooting bugs when I encounter challenging issues. 
+* ChatGPT will help introduce me to new methods or libraries I may not have considered, expanding my knowledge base of things I can learn. 
+* I will not use ChatGPT to handle the main coding tasks, as I want to build these elements independently. 
+
+GitHub Copilot
+
+* I will use GitHub Copilot for suggestions on simple, repetitive tasks or to see alternative approaches for structuring a function. It will also be valuable for suggesting code snippets that may help solve small issues more efficiently.
+* I will avoid relying on Copilot for writing entire functions or complex interactions since my goal is to develop the core code on my own. I’ll also be cautious with Copilot to ensure it doesn’t lead me to over-simplify unique aspects of my project.
 
 ### *Responsible Use*
 
-How would you use Generative AI responsibly? 
+I will use Generative AI responsibly by prioritizing my coding and design skills while leveraging AI tools as supportive resources. I will engage with ChatGPT and GitHub Copilot to gain insights, introduce myself to new concepts, and troubleshoot issues without allowing them to do the work for me.
+
+Additionally, I will critically evaluate the outputs from these AI tools, ensuring they align with my project goals and standards. I’ll only implement suggestions that I can fully understand the coding behind, and which enhance my work and maintain my unique design voice.
 
 ---
 
