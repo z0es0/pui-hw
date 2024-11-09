@@ -226,11 +226,14 @@ Week 14 Dec 2 - Dec 6:
 
 ### *Libraries and Other Components*
 
+* react
+* Framer Motion
+* Figma's Embed API
+
+OLD - changed my mind
 * jQuery: For easier DOM manipulation, event handling, and animations.
 * AOS (Animate On Scroll): For adding scroll-triggered animations to make elements appear as users scroll down.
 * Bootstrap: For responsive layout components, grid system, and some built-in styling.
-* Figma's Embed API: To embed interactive Figma prototypes.
-
 
 ## Generative AI Use Plan
 
