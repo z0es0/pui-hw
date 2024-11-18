@@ -8,6 +8,11 @@ body {
     font-size: 20px;
 }
 
+h1 {
+    font-size: 100px;
+    font-weight: 550;
+}
+
 a { 
     color:black;
     text-decoration: none;
@@ -50,7 +55,7 @@ nav {
 }
 
 .bio {
-    max-width: 50%;
+    max-width: 60%;
     font-size: 29px;
     text-align: justify;
 }
@@ -105,4 +110,58 @@ nav {
     border-radius: 16px;
     font-size: .9em;
     padding: 0.1rem 0.9rem;
+}
+
+/* PROJECT PAGE -------------------------------------------------------- */
+
+/* PROJECT DETAIL COL -------------------------------------------------------- */
+
+.project-detail-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    /* display: inline-flex; */
+    border: 1.5px solid black;
+    border-radius: 16px;
+    font-size: .9em;
+    padding: 0.1rem 0.9rem;
+    max-width: fit-content;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-detail p {
+    margin: 0; /* chatGPT */
+}
+
+.project-detail p:first-child { /* chatGPT */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* PROJECT COVER -------------------------------------------------------- */
+
+.gen-section .project-details-banner {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap;
+    width: 100%; */
 }
