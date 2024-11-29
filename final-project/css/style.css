@@ -3,14 +3,98 @@
 
 */
 
+@font-face {
+    font-family: 'AuthenticSans';
+    src: url('../fonts/authentic-sans/AUTHENTICSans-Condensed-130.woff2') format('woff2');
+    /* font-weight: 400; */
+    font-style: condensed;
+}
+
+@font-face {
+    font-family: 'AuthenticSans';
+    src: url('../fonts/authentic-sans/AUTHENTICSans-60.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AuthenticSans';
+    src: url('../fonts/authentic-sans/AUTHENTICSans-90.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AuthenticSans';
+    src: url('../fonts/authentic-sans/AUTHENTICSans-130.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'AuthenticSans';
+    src: url('../fonts/authentic-sans/AUTHENTICSans-150.woff2') format('woff2');
+    font-weight: 900;
+    font-style: bolder;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-VariableFont_opsz\,wght.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'InstrumentSerif';
+    src: url('../fonts/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'InstrumentSerif';
+    src: url('../fonts/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+.inter {
+    font-family: 'Inter';
+}
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'AuthenticSans', Helvetica, Arial, sans-serif;
     font-size: 20px;
+    font-weight: 400;
+    background-color: #ede8e8;
+    color: #1e301f;
 }
 
 h1 {
     font-size: 100px;
-    font-weight: 550;
+    font-weight: 700;
+}
+
+h2 { /* PROBLEM STATEMENT */
+    /* font-family: 'Inter'; */
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    font-size: 40px;
+    /* font-style: italic; */
+}
+
+h3 { /* SECTION LARGE HEADER */
+    font-family: 'InstrumentSerif';
+    font-style: italic;
+    font-size: 54px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4 {
+    font-size: 25px;
+    margin: 1rem 0 0 0;
+    font-weight: 900;
+}
+
+p {
+    margin: 0.8rem 0 0.8rem 0;
 }
 
 a { 
@@ -96,7 +180,7 @@ nav {
 }
 
 .gallery-card-description {
-    font-size: 20px; /* Adjust the font size for description if needed */
+    font-size: 20px; 
 }
 
 .gallery-card-tags {
@@ -107,9 +191,13 @@ nav {
 
 .gallery-card-tag {
     border: 1.5px solid black;
-    border-radius: 16px;
-    font-size: .9em;
-    padding: 0.1rem 0.9rem;
+    border-radius: 50px;
+    font-size: .8em;
+    padding: 0.26rem 0.9rem 0.07rem 0.9rem;
+}
+
+.gallery-card-tag:hover {
+    background-color: aqua;
 }
 
 /* PROJECT PAGE -------------------------------------------------------- */
@@ -120,6 +208,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    /* max-width: 50%; */
 }
 
 .project-tags {
@@ -159,9 +248,64 @@ nav {
 
 /* PROJECT COVER -------------------------------------------------------- */
 
-.gen-section .project-details-banner {
+.gen-section.project-details-banner {
     display: flex;
     flex-direction: row;
+    gap: 3rem;
     /* flex-wrap: nowrap;
     width: 100%; */
+}
+
+.project-cover-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    gap: 1.5rem;
+}
+
+.project-cover-image {
+    display: flex;
+    width: 100%;
+}
+
+/* PROBLEM STATEMENT -------------------------------------------------------- */
+
+#problem-statement {
+    max-width: 70%;
+    margin: 6rem 0;
+}
+
+.text-section {
+    margin: 1rem 0;
+}
+
+.limit-600 {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.right-aligned {
+    margin-left: auto;
+}
+
+.two-cols {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.square-image {
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    /* max-width: 40%; */
+    /* object-fit: cover;  */
+}
+
+.top-aligned {
+    display: flex;
+    align-items: fle;
 }
