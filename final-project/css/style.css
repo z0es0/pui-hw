@@ -151,13 +151,6 @@ nav {
     grid-auto-flow: row; /* fill list items row by row */
 }
 
-/* .gallery-col {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* chatGPT */
-    /* gap: 4rem;
-} */
-
 .gallery-card {
     width: 100%;
 }
@@ -192,8 +185,24 @@ nav {
     border: 1.5px solid black;
     border-radius: 50px;
     font-size: .8em;
+    display: flex;
+    align-items: center;
     padding: 0.26rem 0.9rem 0.07rem 0.9rem;
+    cursor: pointer;
 }
+
+#selected-tags-container .gallery-card-tag {
+    position: relative;
+    padding-right: 28px;
+  }
+  
+#selected-tags-container .gallery-card-tag img {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+  }
 
 .ux-design-tag:hover {
     background-color: #47613e;
@@ -247,6 +256,13 @@ nav {
 
 .communication-design-tag.selected {
     background-color: #ffbfee;
+}
+
+#selected-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0 0 1rem 0;
 }
 
 
@@ -358,3 +374,4 @@ nav {
     display: flex;
     align-items: fle;
 }
+

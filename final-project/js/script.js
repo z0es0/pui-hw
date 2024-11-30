@@ -8,28 +8,28 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
     var selectedTags = []; // array to keep track of selected tags
   
     $('.gallery-card-tag').on('click', function() { // listen for clicks on the tag elements
-      var selectedTag = $(this).text().trim(); // retrieve the clicked tag text without white spaces
+        event.stopPropagation(); // Prevent click event from propagating to the parent link
+        event.preventDefault(); // Prevent default behavior (e.g., navigation)      
+      
+        var selectedTag = $(this).text().trim(); // retrieve the clicked tag text without white spaces
   
       if (selectedTags.includes(selectedTag)) { // if the tag is selected...
         selectedTags = selectedTags.filter(function(tag) { // .filter() makes a new array...
           return tag !== selectedTag; // with tags in selectedTags that aren't the selectedTag
         });
+
+        $(`.gallery-card-tag:contains(${selectedTag})`).removeClass('selected'); // remove class
+
       } else {
         selectedTags.push(selectedTag); // if the tag isn't in selectedTags, add it
+        $(`.gallery-card-tag:contains(${selectedTag})`).addClass('selected'); // add selected class to tag
       }
   
       updateSelectedTagsDisplay();
-  
-      // Filter the projects based on the selected tags
       filterProjectsByTags();
     });
   
     function updateSelectedTagsDisplay() { // update the #selected-tags span with the current selected tags
-    //   if (selectedTags.length > 0) {
-    //     $('#selected-tags').text(selectedTags.join(', ')); // set the text contents
-    //   } else {
-    //     $('#selected-tags').text('None');
-    //   }
     
         $('#selected-tags-container').empty(); // clear existing selected tags from the html container
 
@@ -38,12 +38,16 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
                 // Create a tag element with the same visual style
                 var tagElement = $('<span>')
                     .addClass('gallery-card-tag selected')
-                    .text(tag);
+                    .text(tag)
+                    .append(`<img src="./images/x.png" alt="remove tag" class="remove-icon">`) // Add 'selected' class and append the X icon
+                    .on('click', function() { 
+                        unselectTag(tag); // Add unselect behavior when clicked
+                    });
 
                 $('#selected-tags-container').append(tagElement); // Append the tag to the container
             });
-        } else {
-            $('#selected-tags-container').text('None'); // If no tags are selected
+        // } else {
+        //     $('#selected-tags-container').text('None'); // If no tags are selected
         }
     }
   
@@ -64,6 +68,17 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
         }
       });
     }
+
+    // Unselect tag globally when clicked in the selected tags container
+    function unselectTag(tag) {
+        selectedTags = selectedTags.filter(function(selected) {
+            return selected !== tag; 
+        });
+
+        $(`.gallery-card-tag:contains(${tag})`).removeClass('selected'); // Remove selected class globally
+        updateSelectedTagsDisplay();
+        filterProjectsByTags();
+    }
   
     // "show all" button
     $('#show-all').on('click', function() {
@@ -71,21 +86,5 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
       updateSelectedTagsDisplay();
       $('.gallery-card').show();
       $('.gallery-card-tag.selected').removeClass('selected');
-    });
-
-
-    // toggle selected or not:
-    $(".gallery-card-tag").on("click", function () {
-        const tagClass = $(this).attr("class").split(" ").find(cls => cls !== "gallery-card-tag" && cls.endsWith("-tag")); // gets the class tag
-        
-        const isSelected = $(`.${tagClass}`).hasClass("selected");
-        console.log(isSelected)
-
-        if (isSelected) {
-            $(`.${tagClass}`).removeClass("selected");
-        } else {
-            $(`.${tagClass}`).addClass("selected");
-        }
-        
     });
   });
