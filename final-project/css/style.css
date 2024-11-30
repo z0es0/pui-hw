@@ -145,21 +145,20 @@ nav {
 }
 
 .gallery {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* to make this into columns */
+    gap: 20px;
+    grid-auto-flow: row; /* fill list items row by row */
 }
 
-.gallery-col {
+/* .gallery-col {
     display: flex;
     flex-direction: column;
     flex: 1; /* chatGPT */
-    gap: 4rem;
-}
+    /* gap: 4rem;
+} */
 
 .gallery-card {
-    display: flex;
-    flex-direction: column;
     width: 100%;
 }
 
@@ -196,12 +195,62 @@ nav {
     padding: 0.26rem 0.9rem 0.07rem 0.9rem;
 }
 
-.gallery-card-tag:hover {
-    background-color: aqua;
+.ux-design-tag:hover {
+    background-color: #47613e;
+    color: white;
 }
 
-/* PROJECT PAGE -------------------------------------------------------- */
+.ux-design-tag.selected {
+    background-color: #47613e;
+    color: white;
+}
 
+.service-design-tag:hover {
+    background-color: #e8ba5d;
+}
+
+.service-design-tag.selected {
+    background-color: #e8ba5d;
+}
+
+.ux-research-tag:hover {
+    background-color: #925a99;
+    color: white;
+}
+
+.ux-research-tag.selected {
+    background-color: #925a99;
+    color: white;
+}
+
+.healthcare-tag:hover {
+    background-color: #81cdff;
+}
+
+.healthcare-tag.selected {
+    background-color: #81cdff;
+}
+
+.research-tag:hover {
+    background-color: #c02424;
+    color: white;
+}
+
+.research-tag.selected {
+    background-color: #c02424;
+    color: white;
+}
+
+.communication-design-tag:hover {
+    background-color: #ffbfee;
+}
+
+.communication-design-tag.selected {
+    background-color: #ffbfee;
+}
+
+
+/* PROJECT PAGE -------------------------------------------------------- */
 /* PROJECT DETAIL COL -------------------------------------------------------- */
 
 .project-detail-col {
