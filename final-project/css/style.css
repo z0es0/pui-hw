@@ -3,6 +3,8 @@
 
 */
 
+/* FONTS ------------------------------------------------------------- */
+
 @font-face {
     font-family: 'AuthenticSans';
     src: url('../fonts/authentic-sans/AUTHENTICSans-Condensed-130.woff2') format('woff2');
@@ -58,11 +60,12 @@
     font-family: 'Inter';
 }
 
+/* OVERALL STYLE ------------------------------------------------------------- */
+
 body {
     font-family: 'AuthenticSans', Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 400;
-    /* background-color: #ede8e8; */
     color: #1e301f;
 }
 
@@ -72,11 +75,8 @@ h1 {
 }
 
 h2 { /* PROBLEM STATEMENT */
-    /* font-family: 'Inter'; */
-    /* text-transform: uppercase; */
     font-weight: 400;
     font-size: 40px;
-    /* font-style: italic; */
 }
 
 h3 { /* SECTION LARGE HEADER */
@@ -138,6 +138,8 @@ nav {
     margin: 42px 46px;
 }
 
+/* HOME PAGE ------------------------------------------------------------- */
+
 .bio {
     max-width: 60%;
     font-size: 29px;
@@ -149,6 +151,27 @@ nav {
     grid-template-columns: repeat(2, 1fr); /* to make this into columns */
     gap: 20px;
     grid-auto-flow: row; /* fill list items row by row */
+}
+
+
+@media (max-width: 850px) {
+    .bio {
+        max-width: 80%;
+    }
+
+    /* .gallery {
+        grid-template-columns: 1fr;
+    } */
+}
+
+@media (max-width: 650px) {
+    .bio {
+        max-width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .gallery-card {
@@ -177,7 +200,8 @@ nav {
 
 .gallery-card-tags {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
