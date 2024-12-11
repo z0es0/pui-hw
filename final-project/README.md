@@ -11,37 +11,35 @@ Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/
 
 ## Part 1: Website Description
 
-Describe your website (300 words).
+This website is my personal portfolio, where I showcase the different projects I've worked on, both in school and in my professional career. The purpose of my website is to show recruiters who I am, what I'm passionate about, and a little bit of my personality. Since I am aiming to apply for service design roles in healthcare, I want my audience to see me as a professional, yet personable designer, whose best qualities are my ability to empathize and design human-centered experiences. Because of this, I didn't want the interactions on my website to be too over-the-board. However, I still wanted to showcase my front-end development skills, so incorporated a practical and functional filtering mechanism for recruiters to narrow down my projects based on what they're looking for, as well as subtle micro-interactions on hover and scroll. I think my website is interesting and engaging because it uses hierarchy, micro-interactions, and interactivity (in the filter function) primarily as a ***tool*** to get my message across--that I am passionate about the work that I do. I want people to *read* what I have to say and learn more about me and the work that I do. 
 
-* What is the purpose of your website?   
-* Who is the target audience?  
-* What information do you convey with your website?   
-* How is it interesting and engaging? 
+I also believe that the aesthetic of my website differentiates me from other more minimalist portfolios, and I hope that tells viewers that I am unafraid to take risks and explore.
 
 ## Part 2: User Interaction
 
-How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
-
-1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. 
+1. **Filter projects:** on the homepage, click on any of the category tags under the projects to filter projects by that tag. Feel free to experiment with clicking multiple tags and removing them in any order by clicking them again, or clicking the row of selected tags at the top.
+2. **Learn more about my "Season" project:** Click anywhere (except the tags) on the "Season" project card on the homepage to navigate to that page and learn more about the project.
+3. **Learn more about me:** Click on any of the links in the navigation bar or footer to navigate to different pages (Work/Homepage, Resume, About Me) or external links to email me or add me on LinkedIn. 
+4. **Experience the subtle micro-interactions:** Load each page to experience the micro-interactions triggered on scroll, or on hover (for links and buttons). May have to refresh the page.
 
 ## Part 3: External Tool
 
-Describe what important external tool you used (JavaScript library, Web API, animations, or other). Following the bulleted list format below, reply to each of the prompts.
-
-1. Name of tool1  
-   * Why did you choose to use it over other alternatives? (2 sentences max)  
-   * How you used it? (2 sentences max)  
-   * What does it add to your website? (2 sentences max)  
-2. Name of tool2
+1. jQuery
+    *  Rationale: I looked up multiple ways to use a filter function, and found libraries that would do it for me. I chose jQuery because I found a resource online (https://codepen.io/NKroe/pen/oRjbmr) using jQuery that seemed understandable to me (and less intimidating than React) and wanted practice using a library more "from scratch" while also simplifying my code.
+    * Use: I used jQuery to implement the filter function by selecting elements dynamically and binding click events to filter options (e.g., with .on()). The function then toggles visibility of content based on whether they're "selected" (which uses .addClass and .removeClass from jQuery).
+    * Benefit: It allowed me to create my filter function in an easier, more understandable way to me. If I didn't use it, I would have had to do more manual manipulations to my code.
+2. ScrollReveal
+    * Rationale: ScrollReveal provided an easy way (just one line of code, basically) for me to add the appear-on-scroll micro-interactions to my pages. I used it because I wanted to add a subtle fade-in effect to specific classes on my website and this was an easy way to do that.
+    * Use: I linked to the library in my header, added a function in my JS script to call the "appear on scroll" function to all of the elements I gave the class "scroll".
+    * Benefit: I was able to add a subtle, yet effective micro-interactions, which makes my website more engaging and dynamic to viewers without overwhelming them. 
 
 ## Part 4: Design Iteration
 
-Describe how you iterated on your prototypes, if at all, including any changes you made to your original design while you were implementing your website and the rationale for the changes. (4-8 sentences max)
+I ultimately decided not to do the background change on hover effect on my homepage, because I thought it would be too overwhelming to the user--this was also feedback that I had originally received in one of my critiques, but wasn't sure what I was going to do at that point. I also did not plan to prototype or develop the "About Me" page, but ended up also building that out as a way to add more complexity to my project and also experiment with more creative styling--I was able to really play around with breakpoints and flex boxes on that page, so I'm glad I did that! Finally, I also ended up not going for the messy, gallery-wall style as it did not end up looking as good as I had hoped when I programmed it. 
 
 ## Part 5: Implementation Challenge
 
-What challenges did you experience in implementing your website? (2-4 sentences max)
+It took my a while to figure out using jQuery for the filter function, despite having a decent reference. I also questioned my decision to use jQuery at all during my time, but ultimately decided to stick with it because I wanted to get better at using libraries. I also had a hard time styling things in the exact way that I wanted, and found myself spending a while making tweaks and debugging to get my containers to act in the way that I had originally designed in my prototype. 
 
 ## Part 6: Generative AI Use and Reflection
 
@@ -49,58 +47,54 @@ Describe how you used Generative AI tools to create this final project (fill in 
 
 Document your use of all GenAI tools — ChatGPT, Copilot, Claude, Cursor, etc. using the template below. Add/Delete rows or bullet points if needed, and replace Tool1/Tool2 with the name of the tool.
 
+
 ### Usage Experiences by Project Aspects
-
-Feel free to edit the column \_ (other?) or add more columns if there's any other aspect in your project you've used the GenAI tools for.
-
-For the following aspects of your project, edit the corresponding table cell to answer:
-- *Usage*: Whether you used / did not use this tool for the aspect. Enter [Yes/No]
-- *Productivity*: Give a rating on whether this tool makes your productivity for X aspect [1-Much Reduced, 2-Reduced, 3-Slightly Reduced, 4-Not Reduced nor Improved, 5-Slightly Improved, 6-Improved, 7-Much Improved].
 
 | Tool Name | Ratings | design | plan | write code | debug | \_ (other?) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| Tool1 | Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool1 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
-| Tool2| Usage | Yes/No | Yes/No | Yes/No | Yes/No | Yes/No |
-| Tool2 | Productivity | 1~7 | 1~7 | 1~7 | 1~7 | 1~7 |
+| ChatGPT | Usage | No | No | Yes | Yes | N/A |
+| ChatGPT | Productivity | N/A | N/A | 6 | 7 | N/A |
 
+I did not end up using CoPilot (as I had originally intended) to help with my project. 
 
 ### Usage Reflection
 
 > Impact on your design and plan 
-* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
-* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that … For example, 
-  1. Tool1: 
-  2. Tool2:
-* GenAI tool did/did not influence my final design and implementation plan because … For example, 
-  1. Tool1: 
-  2. Tool2:
+* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that …  For example, 
+  1. ChatGPT: I primarily used it to debug. I would input code snippets and asked why something wasn't behaving in the way that I expected.
+
+* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that …  For example, 
+  1. ChatGPT: It was better than I expected at providing the structure for my filter function, although didn't get it right. I ended up having to make adjustments to act in the way that I wanted it to, but as a complete beginner to jQuery, it did well at helping me wrap my head around it and know where to use certain jQuery functions. 
+  
+* GenAI tool did/did not influence my final design and implementation plan because …  For example, 
+  1. CoPilot: I never even set it up so I did not use it at all. 
 
 > Use patterns
 * I accepted the generations when …  For example, 
-  1. Tool1: this tool once suggested … and I adjusted my design according to the suggestion because … 
-  2. Tool2: 
+  1. ChatGPT: the recommendation worked in the way I wanted it to--typically 1-2 lines of code in my styling to get my flex box to work correctly, for example.
+  2. ChatGPT: I could understand what was going on and why it gave me that suggestion, for example with the filter function. 
+
 * I critiqued/evaluated the generated suggestions by … For example, 
-  1. Tool1: this tool once suggested … but I modified/rejected the suggestion because … 
-  2. Tool2: 
+  1. ChatGPT: not incorporating the suggestions, for example, when it would suggest using a framework I was unfamiliar with or a concept that, even if I looked it up, didn't make sense to me. 
 
 
 > Pros and cons of using GenAI tools
 * Pros
-  1. Tool1: 
-  2. Tool2:
+  1. ChatGPT: Introduced me to new ways to do things! Even when it helped me write code (for one thing), I made sure to read up on all the documentation, and looked up every function it suggested that I didn't understand, so that I could know what was going on. 
+  2. ChatGPT: Sped up my debugging process! ChatGPT made debugging much less of a headache, and even if it didn't always suggest the right solution, it helped point me to where things could have gone wrong. 
 * Cons
-  1. Tool1: 
-  2. Tool2:
+  1. ChatGPT: I wonder if I didn't go to ChatGPT for debugging purposes and looked for every bug on my own, maybe I would be better able to remember common pitfalls and bugs that I write so I can avoid them. But I think it's a cost-benefit thing, where the benefit of speeding up debugging with Gen AI probably outweighs the cons. 
 
 
 ### Usage Log
 
 Document the usage logs (prompts and chat history links) for the GenAI tools you used. Some tools may not have an easy way to share usage logs, just try your best! Some instructions for different tools:
 
-1. ChatGPT: 
+1. ChatGPT
+    * https://chatgpt.com/share/6759ef70-c5b4-800e-9ae0-73b8ced3d081
+    * https://chatgpt.com/share/6759ef94-6450-800e-93fd-71e82ed2c7d1
+    * https://chatgpt.com/share/6759efd6-ca78-800e-be29-7408d0b9c506
+
 
 
 ---

@@ -196,17 +196,10 @@ nav {
 }
 
 .gallery-card-image {
-    /* max-width: 100%;
-    height: auto; */
-    /* height: 400px;
-    object-fit: cover; */
-
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Set a max height to ensure consistency */
-    object-fit: contain; /* Keeps the aspect ratio intact */
+    max-width: 100%;
+    aspect-ratio: 16/11;
+    object-fit: cover; 
 }
-
 
 .gallery-card-text {
     display: flex;
