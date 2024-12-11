@@ -7,12 +7,11 @@
 
 
 // FILTER FUNCTION
-$(document).ready(function() { // .ready is when the DOM is fully loaded
+$(document).ready(function() { 
     var selectedTags = []; 
   
     $('.gallery-card-tag').on('click', function() { 
-        // event.stopPropagation(); // prevent click event from propagating to the parent link
-        event.preventDefault(); // prevent default behavior (navigation)      
+        event.preventDefault(); // prevent navigation 
       
         var selectedTag = $(this).text().trim(); 
   
@@ -46,11 +45,9 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
                     .on('click', function() { 
                         unselectTag(tag); 
                     });
-
+                    
                 $('#selected-tags-container').append(tagElement); 
             });
-        // } else {
-        //     $('#selected-tags-container').text('None');
         }
     }
   
@@ -69,23 +66,10 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
         } else {
           $(this).hide(); 
         }
+        
       });
+
     }
-
-    // Animate visibility changes
-    $cards.each(function(index) {
-      const $card = $(this);
-      const delay = index * 50; // Stagger animations slightly
-
-      if (visibleCards.includes(this)) {
-          $card.removeClass('hidden');
-          setTimeout(() => {
-              $card.css('transform', `translate(${index % 3 * 200}px, ${Math.floor(index / 3) * 300}px)`);
-          }, delay);
-      } else {
-          $card.addClass('hidden');
-      }
-  });
 
     function unselectTag(tag) {
         selectedTags = selectedTags.filter(function(selected) {

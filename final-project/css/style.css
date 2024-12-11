@@ -1,5 +1,5 @@
 /* REFERENCES
-
+https://www.w3schools.com/howto/howto_css_transition_hover.asp
 
 */
 
@@ -136,6 +136,15 @@ nav {
     color: black;
 }
 
+.nav-link:hover {
+    color: #6e6d6a;
+    transition: .1s;
+}
+
+.current-page {
+    font-weight: bolder;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -187,9 +196,17 @@ nav {
 }
 
 .gallery-card-image {
-    max-width: 100%;
-    height: auto; /* maintains aspect ratio */
+    /* max-width: 100%;
+    height: auto; */
+    /* height: 400px;
+    object-fit: cover; */
+
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Set a max height to ensure consistency */
+    object-fit: contain; /* Keeps the aspect ratio intact */
 }
+
 
 .gallery-card-text {
     display: flex;
@@ -205,6 +222,8 @@ nav {
 .gallery-card-description {
     font-size: 20px; 
 }
+
+/* TAGS ------------------------------------------------------------- */
 
 .gallery-card-tags {
     display: flex;
@@ -226,7 +245,14 @@ nav {
 #selected-tags-container .gallery-card-tag {
     position: relative;
     padding-right: 28px;
-  }
+}
+
+#selected-tags-container .gallery-card-tag:hover {
+    background-color: #f6f5f4;
+    /* color: #5e5d5a;
+    border-color: #5e5d5a; */
+    transition: .3s;
+}
   
 #selected-tags-container .gallery-card-tag img {
     position: absolute;
@@ -239,6 +265,7 @@ nav {
 .ux-design-tag:hover {
     background-color: #47613e;
     color: white;
+    transition: .2s;
 }
 
 .ux-design-tag.selected {
@@ -248,6 +275,7 @@ nav {
 
 .service-design-tag:hover {
     background-color: #e8ba5d;
+    transition: .2s;
 }
 
 .service-design-tag.selected {
@@ -257,6 +285,7 @@ nav {
 .ux-research-tag:hover {
     background-color: #925a99;
     color: white;
+    transition: .2s;
 }
 
 .ux-research-tag.selected {
@@ -266,6 +295,7 @@ nav {
 
 .healthcare-tag:hover {
     background-color: #81cdff;
+    transition: .2s;
 }
 
 .healthcare-tag.selected {
@@ -275,6 +305,7 @@ nav {
 .research-tag:hover {
     background-color: #c02424;
     color: white;
+    transition: .2s;
 }
 
 .research-tag.selected {
@@ -284,6 +315,7 @@ nav {
 
 .communication-design-tag:hover {
     background-color: #ffbfee;
+    transition: .2s;
 }
 
 .communication-design-tag.selected {
@@ -365,7 +397,7 @@ nav {
     width: 100%;
 }
 
-/* PROBLEM STATEMENT -------------------------------------------------------- */
+/* PROJECT SECTIONS -------------------------------------------------------- */
 
 #problem-statement {
     max-width: 70%;
@@ -410,5 +442,96 @@ nav {
 .top-aligned {
     display: flex;
     align-items: fle;
+}
+
+
+/* RESUME -------------------------------------------------------- */
+
+.resume {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* ABOUT ME -------------------------------------------------------- */
+
+.about-me-cols {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.hero-image {
+    max-width: 500px;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.image-and-quote {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.small-headshot {
+    max-width: 200px;
+    height: 250px;
+}
+
+.quote {
+    text-align: right;
+}
+
+.about-me-text {
+    margin-top: 1rem;;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.connect-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.connect-button {
+    border: 1.5px solid black;
+    border-radius: 50px;
+    padding: 1rem 2rem .8rem 2rem;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    background-color: #1e301f;
+    color: white;
+    transition: .25s;
+}
+
+@media (max-width: 1207px) {
+    .image-and-quote {
+        flex-wrap: wrap;
+    }
+    .quote {
+        text-align: left;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-me-cols {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        max-height: 500px;
+        max-width: 700px;
+    }
 }
 

@@ -100,8 +100,8 @@ For the following aspects of your project, edit the corresponding table cell to 
 
 Document the usage logs (prompts and chat history links) for the GenAI tools you used. Some tools may not have an easy way to share usage logs, just try your best! Some instructions for different tools:
 
-1. [ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq) / [Gemini](https://support.google.com/gemini/answer/13743730?hl=en&co=GENIE.Platform%3DDesktop): share the anonymous link to all of your chat histories relevant to this project
-2. [GitHub Copilot (VSCode)](https://code.visualstudio.com/docs/copilot/copilot-chat#:~:text=You%20can%20export%20all%20prompts%20and%20responses%20for%20a%20chat%20session%20in%20a%20JSON%20file%20with%20the%20Chat%3A%20Export%20Session...%20command%20(workbench.action.chat.export)%20in%20the%20Command%20Palette.): export chat histories relevant to this project.
+1. ChatGPT: 
+
 
 ---
 
@@ -111,11 +111,42 @@ Document the changes and progress of your project. How have you followed or chan
 
 ## Implementation Plan Updates
 
-- [ ] ...
+### *Implementation Plan*
+ Week 9 Oct 28 - Nov 1:
+  - [X]FP1 due
+  - [X] Conduct usability testing on prototype
+  - [X] Incorporate initial feedback on structure
+
+ Week 10 Nov 4 - Nov 8:
+  - [X] FP2 due
+  - [X] Adjust navigation consistency
+  - [X] Implement text hierarchy updates on homepage and details pages
+  - [X] Refine gallery wall layout
+
+Week 11 Nov 11 - Nov 15:
+  - [X] Conduct second round of usability testing on updated prototype 
+  - [X] Incorporate feedback on readability and layout
+  - [X] Begin final visual polish and animation integration
+
+Week 12 Nov 18 - Nov 22:
+  - [ ] Adjust responsive design for mobile and tablet views
+  - [ ] Conduct accessibility testing (WCAG compliance)
+  - [ ] Refine interaction effects (hover, scroll animations)
+
+Week 13 Nov 25 - Nov 29:
+  - [X] Thanksgiving
+  - [X] Review all content and finalize text for each page
+
+Week 14 Dec 2 - Dec 6:
+  - [ ] FP4 due
+  - [ ] Finalize prototype for submission
 
 ## Generative AI Use Plan Updates
 
-- [ ] ...
+Original plan: I plan to use Generative AI tools primarily as support resources during the coding process, rather than as primary developers. I’ll rely on these tools to help me get unstuck, provide me with new concepts I may not know about that I can look into, and assist with debugging, allowing me to learn more independently while ensuring smooth progress.
+
+Updates: I kept to the original plan, but also used it to help me structure the JS script for the tag feature. I did read in very much detail the documentation about using jQuery and every function that it suggested, and I fully understand every line of code in my project. 
+
 
 Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-generative-ai-use-and-reflection).
 
