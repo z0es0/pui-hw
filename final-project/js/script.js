@@ -5,6 +5,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
 
 
+
 // FILTER FUNCTION
 $(document).ready(function() { // .ready is when the DOM is fully loaded
     var selectedTags = []; 
@@ -71,6 +72,21 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
       });
     }
 
+    // Animate visibility changes
+    $cards.each(function(index) {
+      const $card = $(this);
+      const delay = index * 50; // Stagger animations slightly
+
+      if (visibleCards.includes(this)) {
+          $card.removeClass('hidden');
+          setTimeout(() => {
+              $card.css('transform', `translate(${index % 3 * 200}px, ${Math.floor(index / 3) * 300}px)`);
+          }, delay);
+      } else {
+          $card.addClass('hidden');
+      }
+  });
+
     function unselectTag(tag) {
         selectedTags = selectedTags.filter(function(selected) {
             return selected !== tag; 
@@ -89,3 +105,7 @@ $(document).ready(function() { // .ready is when the DOM is fully loaded
       $('.gallery-card-tag.selected').removeClass('selected');
     });
   });
+
+
+// APPEAR ON SCROLL
+ScrollReveal().reveal('.scroll', { delay: 100});

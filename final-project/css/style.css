@@ -3,6 +3,8 @@
 
 */
 
+
+
 /* FONTS ------------------------------------------------------------- */
 
 @font-face {
@@ -105,7 +107,8 @@ a {
 header {
     margin: 42px 46px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
     justify-content: space-between;
 
     font-size: 16px;
@@ -114,7 +117,9 @@ header {
 footer {
     margin: 94px 46px 48px 46px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
     justify-content: space-between;
 
     font-size: 16px;
@@ -122,6 +127,7 @@ footer {
 
 nav { 
     display: flex;
+    flex-wrap: wrap;
     gap: 36px;
 }
 
@@ -148,9 +154,9 @@ nav {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* to make this into columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    grid-auto-flow: row; /* fill list items row by row */
+    grid-auto-flow: row; 
 }
 
 
@@ -158,10 +164,6 @@ nav {
     .bio {
         max-width: 80%;
     }
-
-    /* .gallery {
-        grid-template-columns: 1fr;
-    } */
 }
 
 @media (max-width: 650px) {
@@ -171,6 +173,12 @@ nav {
 
     .gallery {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .bio {
+        font-size: 22px;
     }
 }
 
@@ -383,7 +391,12 @@ nav {
     flex-direction: row;
     gap: 3rem;
     align-items: center;
-    /* justify-content: center; */
+}
+
+@media (max-width: 1200px) {
+    .two-cols {
+        flex-wrap: wrap;
+    }
 }
 
 .square-image {
