@@ -135,6 +135,16 @@ footer {
     font-size: 16px;
 }
 
+@media (max-width: 700px) {
+    header {
+        margin: 42px 12px;
+    }
+
+    footer {
+        margin: 94px 12px 48px 12px;    
+    }
+}
+
 nav { 
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +175,7 @@ nav {
 
 @media (max-width: 700px) {
     .gen-section {
-        margin: 12px 15px;
+        margin: 42px 12px;
     }
 }
 
