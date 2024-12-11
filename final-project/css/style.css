@@ -89,6 +89,16 @@ h3 { /* SECTION LARGE HEADER */
     margin: 0;
 }
 
+@media (max-width: 700px) {
+    h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 200%
+    }
+}
+
 h4 {
     font-size: 25px;
     margin: 1rem 0 0 0;
@@ -151,6 +161,12 @@ nav {
 
 .gen-section {
     margin: 42px 46px;
+}
+
+@media (max-width: 700px) {
+    .gen-section {
+        margin: 12px 15px;
+    }
 }
 
 /* HOME PAGE ------------------------------------------------------------- */
@@ -326,6 +342,8 @@ nav {
 /* PROJECT PAGE -------------------------------------------------------- */
 /* PROJECT DETAIL COL -------------------------------------------------------- */
 
+
+
 .project-detail-col {
     display: flex;
     flex-direction: column;
@@ -374,8 +392,12 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    /* flex-wrap: nowrap;
-    width: 100%; */
+}
+
+@media (max-width: 700px) {
+    .gen-section.project-details-banner {
+        flex-wrap: wrap;
+    }
 }
 
 .project-cover-col {
@@ -395,6 +417,12 @@ nav {
 #problem-statement {
     max-width: 70%;
     margin: 6rem 0;
+}
+
+@media (max-width: 700px) {
+    #problem-statement {
+        max-width: 100%;
+    }
 }
 
 .text-section {
@@ -428,13 +456,11 @@ nav {
     width: 100%;
     height: auto;
     min-width: 200px;
-    /* max-width: 40%; */
-    /* object-fit: cover;  */
 }
 
 .top-aligned {
     display: flex;
-    align-items: fle;
+    align-items: flex-start;
 }
 
 
