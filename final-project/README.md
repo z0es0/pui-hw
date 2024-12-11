@@ -21,6 +21,9 @@ I also believe that the aesthetic of my website differentiates me from other mor
 2. **Learn more about my "Season" project:** Click anywhere (except the tags) on the "Season" project card on the homepage to navigate to that page and learn more about the project.
 3. **Learn more about me:** Click on any of the links in the navigation bar or footer to navigate to different pages (Work/Homepage, Resume, About Me) or external links to email me or add me on LinkedIn. 
 4. **Experience the subtle micro-interactions:** Load each page to experience the micro-interactions triggered on scroll, or on hover (for links and buttons). May have to refresh the page.
+5. **Responsiveness:** The website is responsive across 6 breakpoints, including for desktop and mobile screens. I have so many breakpoints because the formatting looked different based on each page, and I wanted them to be responsive to different sizes of desktop screens while maintaining the visual appeal. Because my project page and About Me pages have unconventional layouts (multiple columns, alignments, etc.) it was important for me to be very specific about the different breakpoints. Please interact with the site on a full-screen desktop and mobile. 
+6. **Accessibility:** The website is accessible and has passed the WAVE test:
+    * Homepage: ![screenshot of WAVE results, showing no errors](images/WAVE_homepage.png)
 
 ## Part 3: External Tool
 
