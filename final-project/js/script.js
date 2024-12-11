@@ -13,13 +13,13 @@ $(document).ready(function() {
     var selectedTags = []; 
   
     $('.gallery-card-tag').on('click', function() { 
-        event.preventDefault(); // prevent navigation 
+        event.preventDefault();
       
         var selectedTag = $(this).text().trim(); 
   
       if (selectedTags.includes(selectedTag)) {
-        selectedTags = selectedTags.filter(function(tag) { // .filter() makes a new array...
-          return tag !== selectedTag; // with tags in selectedTags that aren't the selectedTag
+        selectedTags = selectedTags.filter(function(tag) {
+          return tag !== selectedTag; 
         });
 
         $(`.gallery-card-tag:contains(${selectedTag})`).removeClass('selected');
@@ -54,16 +54,16 @@ $(document).ready(function() {
     }
   
     function filterProjectsByTags() {
-      $('.gallery-card').each(function() { // for every card...
+      $('.gallery-card').each(function() {
         var tags = $(this).find('.gallery-card-tag').map(function() {
-          return $(this).text().trim(); // get all tags for the current project card
+          return $(this).text().trim(); 
         }).get(); // convert jQuery array into js array
   
         var showCard = selectedTags.every(function(tag) { // check if the project has all selected tags
           return tags.includes(tag);
         });
 
-        if (showCard || selectedTags.length === 0) { // if showCard==true or there are no selected tags
+        if (showCard || selectedTags.length === 0) {
           $(this).show(); 
         } else {
           $(this).hide(); 
